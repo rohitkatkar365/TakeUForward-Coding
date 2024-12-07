@@ -1,0 +1,18 @@
+class Solution {
+
+    static int search(int arr[], int x) {
+
+        // Your code here
+        int loc = -1;
+        for(int i = 0;i<arr.length;i++)
+        {
+            if(arr[i] == x)
+            {
+                loc = i;
+                return loc;
+            }
+        }
+        return -1;
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzg5MzY5ZjFhZmRkNjQ5NmRhMzQ5ZGQ5YmMwMjI3MWFkX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF9lMWE0OGRlOC05NDBkLTQxNTAtOGE0ZS04NDA0Y2QzYzRjYWE=

@@ -1,0 +1,32 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        if(nums.length == 0)
+        {
+            return;
+        }
+        int j = -1;
+        for(int i = 0;i<nums.length;i+=1)
+        {
+            if(nums[i] == 0)
+            {
+                j = i;
+                break;
+            }
+        }
+        if(j==-1)
+        {
+            return;
+        }
+        for(int i = j+1;i<nums.length;i++)
+        {
+            if(nums[i] != 0)
+            {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j]=temp;
+                j+=1;
+            }
+        }
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtL2Q4MDI1YTJhZDNlMTRmYTg5NmJhYTY3NjJjY2ZkYTljX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF81YmI2N2U3My05MjRiLTQ2YjYtYWM5MC0xNjY1ZTFmZWZmYWY=

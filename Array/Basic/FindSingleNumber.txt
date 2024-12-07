@@ -1,0 +1,11 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        int xor = 0;
+        for(int arr:nums)
+        {
+            xor^=arr;
+        }
+        return xor;
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzEwNjQwYjk0MWZmMjRiMzNiODdmMmJmMDZlNWZlMmJkX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF9jYzQ2MWQzZi05Mjg4LTQ0MmYtOTEzZS01NjlhOGQ3ZmIxOTc=

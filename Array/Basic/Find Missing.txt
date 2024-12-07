@@ -1,0 +1,12 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int sum1 = (n*(n+1))/2;
+        int sum2 = 0;
+        for(int arr : nums){
+            sum2+=arr;
+        }
+        return sum1-sum2;
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzE0YjM5YjhmMTczNDQ2YmJhOGFmZTAyNTA2NWNiYWFiX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF8xYjIxNjRhMi02ZGViLTQ0ODQtOTE2MS0yZDlkMDIyYzE2YmE=
