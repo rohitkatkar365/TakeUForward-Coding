@@ -1,0 +1,37 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        Arrays.sort(nums);
+    }
+}
+
+// second way
+class Solution {
+    public void sortColors(int[] nums) {
+        int l = 0;
+        int mid=0;
+        int r = nums.length-1;
+        while(mid <= r)
+        {
+          if(nums[mid] == 0)
+          {
+            int temp = nums[mid];
+            nums[mid] = nums[l];
+            nums[l] = temp;
+            l+=1;
+            mid+=1;
+          }  
+          else if(nums[mid] == 1)
+          {
+            mid+=1;
+          }
+          else{
+            int temp = nums[mid];
+            nums[mid] = nums[r];
+            nums[r] = temp;
+            r-=1;
+          }
+
+        }
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzk0NTliYWYxYWZkYzRlNzM5NzVhNTNlNjBkNjJiNDgxX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF8wMTJlOThlYi1jN2VjLTRjMjQtODE5Zi1jNzQyYzRhOTgyYTc=
