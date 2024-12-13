@@ -1,0 +1,20 @@
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+        int posIndex = 0;
+        int negIndex = 1;
+
+        for (int num : nums) {
+            if (num > 0) {
+                ans[posIndex] = num;
+                posIndex += 2;
+            } else {
+                ans[negIndex] = num;
+                negIndex += 2;
+            }
+        }
+        return ans;
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtL2M3ZWQyMTE1ZWY4MjQ3NWQ5MGYxNGNkOTIwZWQzYTQxX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF84NzQ2YWI1ZC03MzZmLTRmMGMtYWU3Yy1iMjhkYTRlZDBhNmI=

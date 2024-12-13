@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        int n = arr.length;
+        ArrayList<Integer> ans = new ArrayList<>();  // Initialize the ArrayList
+        int maxi = arr[n - 1];
+        ans.add(maxi);  // First leader is always the last element
+        
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] > maxi) {
+                ans.add(arr[i]);
+                maxi = arr[i];
+            }
+        }
+
+        // Reverse the list to get the leaders in left-to-right order
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int i = ans.size() - 1; i >= 0; i--) {
+            result.add(ans.get(i));
+        }
+
+        return result;
+    }
+}
+Input: arr = [30, 10, 10, 5]
+Output: [30, 10, 10, 5]
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzM1NzAzZjc2YjRhYzRiODU4MTU4NTk1ZTJlYjRiZTY0X0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF8zNTZlZDkxMy1kNTQ0LTQ0N2QtYTVmZC1mOTFlMmIwZmFhOTA=

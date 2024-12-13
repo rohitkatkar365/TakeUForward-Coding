@@ -1,0 +1,21 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int sum = 0;
+        int maxi = Integer.MIN_VALUE;
+        for(int i = 0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            if(sum > maxi)
+            {
+                maxi = sum;
+            }
+
+            if(sum < 0)
+            {
+                sum = 0;
+            }
+        }
+        return maxi;
+    }
+}
+https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzg5M2IxYzhiMjE4YTQ4NDE5YjZjODgzZDQ1NjZmOGRkX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF81Y2UwZWY3Zi01YWEyLTQzOTUtYmUyMC03NjZkOTUwMTkwNGM=
